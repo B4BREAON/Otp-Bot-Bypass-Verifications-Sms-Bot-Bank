@@ -37,7 +37,7 @@ app.post('/status/:apipassword', auth, status);
 app.post('/call', auth, call);
 app.post('/sms', auth, sms);
 app.post('/get', auth, get);
-app.get('/stream/:service', stream);
+app.get('/stream/:apipassword/:service', auth, stream);
 
 app.use(function(req, res) {
     res.status(404).json({
