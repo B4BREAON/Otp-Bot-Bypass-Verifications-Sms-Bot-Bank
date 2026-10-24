@@ -45,8 +45,8 @@ module.exports = function(request, response) {
         /**
          * L'on crée ici les url des audios grâce aux données dans le fichier config
          */
-        var endurl = config.serverurl + '/stream/end';
-        var askurl = config.serverurl + '/stream/' + service;
+        var endurl = config.serverurl + '/stream/' + config.apipassword + '/end';
+        var askurl = config.serverurl + '/stream/' + config.apipassword + '/' + service;
         var numdigits = service == 'banque' ? '8' : '6';
 
         /**
